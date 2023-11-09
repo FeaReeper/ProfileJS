@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Reep</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- The first div in our body is our navigation bar with the background color, h1, unordered list, and a button for sign out -->
+    <div class="nav-bar">
+        <div class="nav">
+            <div class="nav-left">
+                <h1 class="nav-title">Profile</h1>
+                <ul class="nav-links">
+                    <li><a href="https://github.com/FeaReeper" class="nav-list">My GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/matthew-reep-67bbb3279/" class="nav-list">My LinkedIn</a></li>
+                    <li><a href="https://xboxgamertag.com/search/FeaReeper" class="nav-list">Gaming</a></li>
+                </ul>
+            </div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn">Sign Out</button></a>
+        </div>
+    </div>
+    <!-- The second div in our body is our container that will have a left and right column-->
+    <div class="container">
+        <!-- Left container has our user card and education -->
+        <div id="left-container">
+            <!-- The beginning of our left container will have our user card -->
+            <div class="image">
+                    <img class="user" src="images\IMG_2518 (2).jpg" alt="picture of Naomi and I">
+            </div>
+            <div class="personal">
+                    <p id="name">FeaReeper</p>
+                    <div class="location">
+                        <img class="map-marker" src="images\map-marker.png" alt="picture of map-marker"> 
+                        <p class="city">Good Hope</p>
+                    </div>
+                    <div class="skills">
+                        <p>Developer | Family-Man | Atl Utd Fan</p>
+                        <p>"We love because he first loved us." - 1 John 4:19</p>
+                    </div>
+                    <div class="settings">
+                        <img class="gear" src="images\gear.png" alt="picture of gear">
+                        <a onclick="changeName('#name') "class="edit" href="#">toggle name</a>
+                    </div>
+            </div>
+            <!-- Followed by our education information, ending our left container/column -->
+            <div class="education">
+                <h2>Education</h2>
+                <div class="schools">
+                    <p class="coding-dojo">Coding Dojo - Full Stack Bootcamp</p>
+                    <p class="school-date">May 2023 - Nov 2023</p>
+                    <p class="black-belt">Double black belt in Python and Mern</p>
+                </div>
+            </div>
+            <div class="my-hobbies">
+                <p class="passion-title">My Passions</p>
+            </div>
+            <div class="passions">
+                <p class="passion">1. <span class="bold">My Family</span> - My wife, Naomi, and my daughter, Nya, are my absolute heart!</p>
+                <p class="passion">2. <span class="bold">My Pups</span> - Khloe and Kora are the best pups I could ask for, mostly Khloe.</p>
+                <p class="passion">3. <span class="bold">Soccer</span> - The greatest sport in the world. Go Atlanta United!</p>
+                <p class="passion">4. <span class="bold">Coding</span> - Coding is life and I can't stop living</p>
+                <p class="passion">5. <span class="bold">Gaming</span> - Xbox guy but grew up on PlayStation, check the link at the top.</p>
+                <p class="passion">6. <span class="bold">Travel</span> - Love to travel but still have much of the world to see.</p>
+            </div>
+            <div class="collage">
+                    <img class="passion-collage" src="images/collage.png" alt="">
+            </div>
+        </div>
+        <!-- Right container will have 5 divs -->
+        <div id="right-container">
+            <!-- Div 1 - our connections request title -->
+            <div class="connections-title">
+                <div class="request-num">
+                    <p class="number" id="request-count">2</p>
+                </div>
+                <div class="connection-request">
+                    <p class="connect-title">Request</p>
+                </div>
+            </div>
+            <!-- Div 2 - our list of people that are requesting to connect -->
+            <div class="request">
+                <div class="request-1" id="request-1">
+                    <div class="first-name">
+                        <img class="connections-pics" src="images/naomi (2).png" alt="">
+                        <p class="connect-names">Naomi Reep</p>
+                    </div>
+                    <div class="first-accept">
+                        <img onclick="removeAdd('#request-1')" src=".\images\accept-circle.png" alt="" class="connections-accept">
+                        <img onclick="removeSubtract('#request-1')" src=".\images\close-circle.png" alt="" class="connections-deny">
+                    </div>
+                </div>
+                <div class="request-2" id="request-2">
+                    <div class="second-name">
+                        <img class="connections-pics" src="images/jake (2).png" alt="">
+                        <p class="connect-names">Jake Leyva</p>
+                    </div>
+                    <div class="second-accept">
+                        <img onclick="removeAdd('#request-2')" src=".\images\accept-circle.png" alt="" class="connections-accept">
+                        <img onclick="removeSubtract('#request-2')" src=".\images\close-circle.png" alt="" class="connections-deny">
+                    </div>
+                </div>
+            </div>
+            <!-- Div 3 - our current connections title -->
+            <div class="your-connections">
+                <div class="connect-num">
+                    <p class="number" id="connection-count">500</p>
+                </div>
+                <div class="your-title">
+                    <p class="connect-title">The Boys</p>
+                </div>
+            </div>
+            <!-- Div 4 - our current list of connections -->
+            <div class="request">
+                <div class="connect-1">
+                    <img src="images/john (2).png" alt="" class="connections-pics">
+                    <p class="connect-names">John Anderson</p>
+                </div>
+                <div class="connect-1">
+                    <img src="images/schwab (2).png" alt="" class="connections-pics">
+                    <p class="connect-names">Johnny Schwabbles</p>
+                </div>
+                <div class="connect-1">
+                    <img src="images/kyle (2).png" alt="" class="connections-pics">
+                    <p class="connect-names">Kyle Smith</p>
+                </div>
+                <div class="connect-1">
+                    <img src="images/mike (2).png" alt="" class="connections-pics">
+                    <p class="connect-names">Michael Leyva</p>
+                </div>
+            </div>
+            <!-- Div 5 - our view more option for our connections -->
+            <div class="more">
+                <a href="#" class="view-more">View More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
