@@ -4,9 +4,7 @@
 }
 
 body {
-    background-image: url("images/atl_lawn.jpeg");
-    background-size: 2000px;
-    /* background-color: #6f6f6f; */
+    background-color: #2a2a2a;
 }
 
 .nav-bar {
